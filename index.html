@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Contatible" content="IE-edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Previsão do tempo</title>
+</head>
+
+<body>
+    <nav>
+        <img class="icon" src="imgs/icon.webp" width="50px" alt="icone da paginas">
+    </nav>
+    
+    <h1 class="titulo">PREVISÃO DO TEMPO</h1>
+
+    <div class="container">
+        <div class="caixa-maior">
+            <input class="imput-city" placeholder="Digite o nome da cidade">
+            <button id="bota-busca" class="class-busca" onclick="CliqueiNoBotao()">
+                <img class="class-img" src="https://www.svgrepo.com/show/488200/find.svg" alt="lupa">
+            </button>
+    
+            <div class="caixa-media">
+                <h2 class="cidade">cidade ainda não definida</h2>
+    
+                <p class="temp">--°c</p>
+    
+    
+                <div class="caixa-menor">
+                    <img class="img-previsao" src="https://openweathermap.org/img/wn/04n.png" alt="icone-da-imagem">
+                    <p class="tezto-previsao"></p>
+                </div>
+            </div>
+    
+            
+        </div>
+    
+        <div class="caixa-tempo">
+            <div class="infosTemp">
+                <p class="umidade">UMIDADE: --%</p>
+                <p class="wind">VENTO: --m/s</p>
+            </div>
+            <div class="infosTemp">
+                <p class="lat">LATITUDE: --</p>
+                <p class="lon">LONGITUDE: --</p>
+            </div>
+        </div> 
+    </div>
+    
+
+    
+    <!--
+        <div class="infos">
+            <p class="fraseInfo">Projeto feito por Matheus De Oliveira Zacanini</p>
+            <a target="_blank" class="button" href="https://www.linkedin.com/in/matheus-zacanini-2a91b8275/">Linkedin</a>
+            <a target="_blank" class="button" href="https://github.com/Zacanini">Github</a>
+        </div>
+
+    -->
+
+</body>
+<script src="script.js"></script>
+
+</html>
