@@ -5,6 +5,7 @@ function colocarDadosNaTela(dados) {
     try {
         console.log(dados)
         document.querySelector(".cidade").innerHTML = "Tempo em " + dados.name
+        document.querySelector(".pais").innerHTML = "PAÍS: " + dados.sys.country
         document.querySelector(".temp").innerHTML = Math.floor(dados.main.temp) + "°c"
         document.querySelector(".lat").innerHTML = "LATITUDE: " + dados.coord.lat
         document.querySelector(".lon").innerHTML = "LONGITUDE: " + dados.coord.lon
@@ -14,6 +15,7 @@ function colocarDadosNaTela(dados) {
         document.querySelector(".img-previsao").src = `https://openweathermap.org/img/wn/${dados.weather[0].icon}.png`
     } catch (error) {
         document.querySelector(".cidade").innerHTML = "Cidade não encontrada! verifique o nome escrito!"
+        document.querySelector(".pais").innerHTML = "PAÍS: --" 
         document.querySelector(".temp").innerHTML = "°c"
         document.querySelector(".lat").innerHTML = "LATITUDE: " 
         document.querySelector(".lon").innerHTML = "LONGITUDE: " 
@@ -27,8 +29,20 @@ function colocarDadosNaTela(dados) {
 
 
 async function BuscarCidade(cidade) {
-    const dados = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${keyApi}&lang=pt_br&units=metric`).then(resposta => resposta.json())
-    colocarDadosNaTela(dados)
+     // Exibir o loading
+  document.getElementById("load").classList.add("loading");
+
+  const dados = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${keyApi}&lang=pt_br&units=metric`).then(resposta => resposta.json())
+
+  // Remover o loading após 1.5 segundos
+  setTimeout(() => {
+    document.getElementById("load").classList.remove("loading");
+  }, 215);
+
+  setTimeout(()=>{
+    colocarDadosNaTela(dados);
+  },216);
+  
 }
 
 document.querySelector(".imput-city").addEventListener("keyup", function (event) {

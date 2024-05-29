@@ -40,6 +40,30 @@ nav{
     z-index: 100;
 }
 
+.loading {
+    position:fixed;
+    width: 80px; 
+    height: 80px; 
+
+    border-radius: 50%; /* Borda arredondada */
+    border: 7px solid #003785c5; 
+    border-top-color: transparent;
+    z-index: 100;
+    
+    animation: rotate 1s linear infinite; /* Animação de rotação */
+  }
+
+  
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
 .container{
     display: flex;
     flex-direction: row;
@@ -141,6 +165,11 @@ nav{
 .caixa-media {
     margin-top: 30px;
 }
+.pais {
+    font-size: 25px;
+    color: #ffffff;
+    margin-top: 20px;
+}
 
 .cidade {
     color: #ffffff;
@@ -152,7 +181,7 @@ nav{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     
 }
 
@@ -177,27 +206,29 @@ nav{
     margin-top: 20px;
 }
 
+
+
 .lat{
-    font-size: 15px;
+    font-size: 25px;
     font-weight: 700;
     color: #ffffff;
     padding: 8px 0;
 }
 .lon{
-    font-size: 15px;
+    font-size: 25px;
     font-weight: 700;
     color: #ffffff;
     padding: 8px 0 0;
 }
 .wind{
-    font-size: 15px;
+    font-size: 25px;
     font-weight: 700;
     color: #ffffff;
     padding: 8px 0;
 }
 
 .umidade {
-    font-size: 15px;
+    font-size: 25px;
     font-weight: 700;
     color: #ffffff;  
     padding: 8px 0;
