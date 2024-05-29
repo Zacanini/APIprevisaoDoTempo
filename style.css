@@ -41,7 +41,7 @@ nav{
 }
 
 .loading {
-    position:fixed;
+    position:absolute;
     width: 80px; 
     height: 80px; 
 
@@ -69,7 +69,7 @@ nav{
     flex-direction: row;
     justify-content: center;
     align-items: stretch;
-    gap: 50px
+    
     
 }
 
@@ -194,6 +194,7 @@ nav{
     opacity: 0.8;
     border-radius: 25px;
     margin-top: 50px;
+    margin-left: 50px;
     padding: 20px;
     width: 16.5rem;
     max-width: 450px;
@@ -287,6 +288,7 @@ nav{
         border-radius: 25px;
         margin-top: 50px;
         margin-bottom: 30px;
+        margin-left: 0;
         padding: 20px;
         width: 85%;
         max-width: 450px;
