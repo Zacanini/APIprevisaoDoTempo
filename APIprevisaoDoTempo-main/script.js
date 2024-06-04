@@ -99,6 +99,7 @@ botaoModo.forEach(botao => {
         document.querySelector('.cidade').classList.toggle('letrasNoturno');
         document.querySelector('.pais').classList.toggle('letrasNoturno');
         document.querySelector('.temp').classList.toggle('letrasNoturno');
+        document.querySelector('.tezto-previsao').classList.toggle('letrasNoturno');
         document.querySelector('.umidade').classList.toggle('letrasNoturno');
         document.querySelector('.wind').classList.toggle('letrasNoturno');
         document.querySelector('.lat').classList.toggle('letrasNoturno');
